@@ -7,6 +7,7 @@ const HomePage = () => (
     <Meta
       description="Free and open-source general-purpose Discord bot."
       url="/"
+      noAppendSiteName
     />
 
     <HomeContainer />
