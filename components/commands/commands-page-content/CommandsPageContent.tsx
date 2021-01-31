@@ -12,14 +12,14 @@ const CommandsPageContent = ({ serverData }: { serverData: CommandListServerResp
   });
 
   if (isLoading) {
-    return <LoadingContainer />
+    return <LoadingContainer />;
   }
 
   if (error) {
     return <p>{error}</p>;
   }
 
-  return <CommandData data={data} />
+  return <CommandData data={data} />;
 };
 
 export default CommandsPageContent;
