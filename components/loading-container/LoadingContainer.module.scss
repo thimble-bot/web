@@ -1,0 +1,13 @@
+@import 'colors';
+
+.container {
+  padding: 20px;
+  text-align: center;
+
+  .text {
+    margin-top: 10px;
+    font-size: 22px;
+    color: $thimble-blue;
+    font-weight: 700;
+  }
+}

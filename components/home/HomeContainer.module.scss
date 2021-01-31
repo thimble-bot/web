@@ -1,0 +1,23 @@
+@import 'colors';
+
+.home {
+  text-align: center;
+
+  .avatar {
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .blue {
+    color: $thimble-blue;
+  }
+
+  .green {
+    color: $thimble-green;
+  }
+
+  .inviteContainer {
+    padding: 30px 0;
+  }
+}
