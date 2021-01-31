@@ -1,0 +1,27 @@
+@import 'colors';
+
+.group {
+  border: 1px solid $thimble-dark-blue;
+  margin-bottom: 15px;
+
+  .meta {
+    padding: 15px 25px;
+    color: #fff;
+    background: $thimble-dark-blue;
+
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .commands {
+    padding: 15px 25px;
+
+    > div:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}

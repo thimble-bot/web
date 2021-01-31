@@ -1,0 +1,26 @@
+@import 'colors';
+@import 'globals';
+
+.groups {
+  text-align: center;
+  margin-bottom: 15px;
+
+  button {
+    cursor: pointer;
+    font: 16px / 1.6 $font-family;
+    background: transparent;
+    outline: none;
+    display: inline-block;
+    padding: 3px 15px;
+    border: 3px solid $thimble-green;
+    margin: 10px 5px;
+    transition: .2s background linear,
+                .2s color linear;
+    border-radius: 4px;
+
+    &:hover, &.active {
+      color: #fff;
+      background: $thimble-green;
+    }
+  }
+}
