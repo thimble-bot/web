@@ -3,9 +3,26 @@ import Link from 'next/link';
 import { useState } from 'react';
 import HamburgerIcon from './HamburgerIcon';
 
+import { useRouter } from 'next/router';
+
 const TheHeader = () => {
   const [ hamburgerOpen, setHamburgerOpen ] = useState(false);
   const toggleHamburger = () => setHamburgerOpen(state => !state);
+
+  const routes = [
+    { href: '/', label: 'Home' },
+    { href: '/commands', label: 'Commands' },
+    { href: '/customization', label: 'Customization' },
+    { href: '/help', label: 'Help' }
+  ];
+
+  const router = useRouter();
+
+  const isActive = (url: string): boolean => {
+    return url === '/'
+      ? router.pathname === url
+      : router.pathname.startsWith(url);
+  };
 
   return (
     <header>
@@ -20,10 +37,12 @@ const TheHeader = () => {
         </div>
 
         <nav className={ clsx('main-navigation', { 'hamburger-open': hamburgerOpen }) }>
-          <Link href="/"><a>Home</a></Link>
-          <Link href="/commands"><a>Commands</a></Link>
-          <Link href="/customization"><a>Customization</a></Link>
-          <Link href="/help"><a>Help</a></Link>
+          {routes.map(route => (
+            <Link key={route.href} href={route.href}>
+              <a className={clsx({ active: isActive(route.href) })}>{route.label}</a>
+            </Link>
+          ))}
+
           <a href="https://github.com/thimble-bot/thimble-bot" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a href="/invite" className="invite-button">Invite</a>
         </nav>

@@ -69,7 +69,7 @@ header {
         color: #fff;
         transition: background .15s linear;
 
-        &:hover, &.router-link-exact-active {
+        &:hover, &.active {
           background: $thimble-blue;
         }
 
