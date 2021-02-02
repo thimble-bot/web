@@ -24,6 +24,9 @@ yarn
 cp .env.example .env
 ```
 
+Make sure to change the values to your environment. You should also place a
+Firebase service account JSON into `.firebase/credentials.json`.
+
 **Start the development server with hot reload:**
 
 ```
