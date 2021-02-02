@@ -1,0 +1,54 @@
+@import 'colors';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $thimble-blue;
+  margin-bottom: 25px;
+
+  .left {
+    nav {
+      a {
+        display: inline-block;
+        padding: 15px 20px;
+        color: #fff;
+        transition: background .2s linear;
+
+        &:hover, &.active {
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  .right {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 10px;
+      width: 32px;
+      height: 32px;
+
+      img {
+        max-width: 100%;
+        border-radius: 100%;
+      }
+    }
+
+    .name {
+      color: #fff;
+
+      span {
+        cursor: pointer;
+        color: #e6e6e6;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

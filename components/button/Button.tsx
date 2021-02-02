@@ -6,6 +6,7 @@ import css from './Button.module.scss';
 
 export interface ButtonOpts {
   primary?: boolean;
+  blurple?: boolean;
   href?: string;
   newTab?: boolean;
   nofollow?: boolean;
@@ -14,8 +15,14 @@ export interface ButtonOpts {
   onClick?(): void;
 };
 
-const Button = ({ primary, href, newTab, nofollow, icon, children, onClick }: ButtonOpts) => {
-  const classes = clsx(css.button, { [css.primary]: primary });
+const Button = ({ primary, blurple, href, newTab, nofollow, icon, children, onClick }: ButtonOpts) => {
+  const classes = clsx(
+    css.button,
+    {
+      [css.primary]: primary,
+      [css.blurple]: blurple
+    }
+  );
 
   if (href && href.length) {
     return (

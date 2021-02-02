@@ -1,0 +1,12 @@
+diff --git a/node_modules/@types/next-auth/index.d.ts b/node_modules/@types/next-auth/index.d.ts
+index e3e3f9d..97d9331 100644
+--- a/node_modules/@types/next-auth/index.d.ts
++++ b/node_modules/@types/next-auth/index.d.ts
+@@ -115,6 +115,7 @@ interface Callbacks {
+     signIn?(user: User, account: GenericObject, profile: GenericObject): Promise<boolean>;
+     redirect?(url: string, baseUrl: string): Promise<string>;
+     session?(session: SessionBase, user: User): Promise<GenericObject>;
++    session?(session: SessionBase, token: GenericObject): Promise<GenericObject>;
+     jwt?(
+         token: GenericObject,
+         user: User,

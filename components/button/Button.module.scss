@@ -32,6 +32,15 @@
     }
   }
 
+  &.blurple {
+    background: $blurple;
+    color: #fff;
+
+    &:hover {
+      background: lighten($blurple, 5%);
+    }
+  }
+
   svg {
     margin-right: 5px;
   }

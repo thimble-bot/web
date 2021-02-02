@@ -16,7 +16,7 @@ const CommandsPageContent = ({ serverData }: { serverData: CommandListServerResp
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p className="error-message">{error}</p>;
   }
 
   return <CommandData data={data} />;

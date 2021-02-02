@@ -13,7 +13,8 @@ const TheHeader = () => {
     { href: '/', label: 'Home' },
     { href: '/commands', label: 'Commands' },
     { href: '/customization', label: 'Customization' },
-    { href: '/help', label: 'Help' }
+    { href: '/help', label: 'Help' },
+    { href: '/dashboard', label: 'Dashboard' }
   ];
 
   const router = useRouter();
@@ -43,7 +44,6 @@ const TheHeader = () => {
             </Link>
           ))}
 
-          <a href="https://github.com/thimble-bot/thimble-bot" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a href="/invite" className="invite-button">Invite</a>
         </nav>
 
