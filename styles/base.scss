@@ -32,6 +32,16 @@ input {
   }
 }
 
+label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
 .wrapper {
   width: 1020px;
   margin: 0 auto;
@@ -167,9 +177,20 @@ header {
   }
 }
 
-.error-message {
+.error-message, .success-message, .info-message {
   padding: 15px 20px;
-  background: $danger;
   color: #fff;
   margin: 10px 0;
+}
+
+.error-message {
+  background: $danger;
+}
+
+.success-message {
+  background: $thimble-green;
+}
+
+.info-message {
+  background: $thimble-dark-blue;
 }

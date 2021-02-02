@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 import { getSession } from 'next-auth/client';
 
-export default async function guilds(req: NextApiRequest, res: NextApiResponse) {
+export default async function listGuilds(req: NextApiRequest, res: NextApiResponse) {
   const session = await getSession({ req });
 
   if (!session) {

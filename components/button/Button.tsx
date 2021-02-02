@@ -11,11 +11,21 @@ export interface ButtonOpts {
   newTab?: boolean;
   nofollow?: boolean;
   icon?: IconProp;
+  disabled?: boolean;
   children: ReactNode;
   onClick?(): void;
 };
 
-const Button = ({ primary, blurple, href, newTab, nofollow, icon, children, onClick }: ButtonOpts) => {
+const Button = ({
+  primary,
+  blurple,
+  href,
+  newTab,
+  nofollow,
+  icon,
+  children,
+  onClick
+}: ButtonOpts) => {
   const classes = clsx(
     css.button,
     {

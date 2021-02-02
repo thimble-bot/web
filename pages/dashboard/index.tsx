@@ -1,5 +1,4 @@
 import AuthenticatedPage from '@/components/AuthenticatedPage';
-import Button from '@/components/button/Button';
 import ServerListPageContent from '@/components/dashboard/server-list/ServerListPageContent';
 import Meta from '@/components/Meta';
 import { useSession } from 'next-auth/client';

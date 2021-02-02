@@ -18,6 +18,8 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@next/mdx": "^10.0.6",
     "clsx": "^1.1.1",
+    "firebase-admin": "^9.4.2",
+    "lodash.difference": "^4.5.0",
     "next": "10.0.3",
     "next-auth": "^3.2.0",
     "react": "17.0.1",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
+    "@types/lodash.difference": "^4.5.6",
     "@types/next-auth": "^3.1.24",
     "@types/node": "^14.14.10",
     "@types/react": "^17.0.0",
