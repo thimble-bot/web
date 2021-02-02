@@ -16,7 +16,7 @@ const getGuildConfig = async (guild: Guild, req: NextApiRequest, res: NextApiRes
     delete (config as IGuildData).guild;
   }
 
-  return res.json({ ok: true, config, guild })
+  return res.json({ ok: true, config, guild });
 };
 
 const updateGuildConfig = async (guild: Guild, req: NextApiRequest, res: NextApiResponse) => {
@@ -49,8 +49,8 @@ export default async function manageGuild(req: NextApiRequest, res: NextApiRespo
   }
 
   const id = Array.isArray(req.query.id)
-  ? req.query.id.join('')
-  : req.query.id;
+    ? req.query.id.join('')
+    : req.query.id;
 
   const userGuildsReq = await fetch('https://discord.com/api/users/@me/guilds', {
     headers: {
