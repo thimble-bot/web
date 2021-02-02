@@ -7,13 +7,6 @@ Our website is available at https://thimble-bot.vercel.app and is deployed on
 [Hetzner Virtual Private Server][hetzner-url]. This document describes when,
 how, and what kind of data Thimble Bot collects about you.
 
-## Website
-
-The website does not collect any personal information about you and does not
-place cookies on your computer. It's a static website that only communicates
-with GitHub's servers. Please read [GitHub's Privacy Statement][github-privacy]
-and [Vercel's Privacy Policy][vercel-privacy].
-
 ## Data Storage
 
 We store certain publicly available information (such as user and guild IDs)
@@ -28,6 +21,29 @@ Thimble Bot will send error reports using [Sentry][sentry-url] in case of
 unhandled exceptions. The information sent will be specific to the code (i.e.
 the exact location of the errored code) and does not contain any personal
 information.
+
+## Website
+
+The Thimble Bot Website does not place any cookies on your computer by default.
+The Website's "Dashboard" feature requires you to log in using your Discord
+account, however we do not store **any** of the data exposed by the Discord API.
+We **will** place cookies that are necessary for the authentication. Your
+Discord access token never gets saved or exposed anywhere. When logging in, the
+website receives your public Discord profile and the list of Discord servers
+you're in.
+
+When you save the configuration settings on the Website, your request will go
+through multiple providers. We will first send the data and authenticate you
+using a serverless function on Vercel. In that serverless function, we will send
+a request to the Discord API to validate that you own the server on which you
+want to change the bot application's settings. Once we validate your request, we
+will save the data on a Firestore instance, as described earlier. This
+information does not contain any private information about you or your Discord
+access token.
+
+In addition to the "Dashboard" feature of the website, we will also send a
+request to GitHub to retrieve the list of commands supported by the bot
+application.
 
 ## Changes
 
@@ -50,7 +66,7 @@ Policy and agree to its terms and conditions.
 
 ---
 
-*Last updated: January 31, 2021.*
+*Last updated: February 2, 2021.*
 
 [vercel-url]: https://vercel.com
 [hetzner-url]: https://www.hetzner.com/cloud
