@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HamburgerIcon from './HamburgerIcon';
 
 import { useRouter } from 'next/router';
@@ -24,6 +24,10 @@ const TheHeader = () => {
       ? router.pathname === url
       : router.pathname.startsWith(url);
   };
+
+  useEffect(() => {
+    setHamburgerOpen(false);
+  }, [ router.pathname ]);
 
   return (
     <header>
