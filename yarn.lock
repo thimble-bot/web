@@ -4358,6 +4358,11 @@ next-auth@^3.2.0:
     require_optional "^1.0.1"
     typeorm "^0.2.30"
 
+next-bar@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/next-bar/-/next-bar-1.0.1.tgz#d4fcc5737a345eb3b270c4f3765f40bac9b3ee0a"
+  integrity sha512-PIigSYncZPKYxePgk1bltVPxjZbN+zA1GOat7IG5HgtrLMYQz6pxkK1RABnJSvxtnMybFwHesm/KJWfhL3genQ==
+
 next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
