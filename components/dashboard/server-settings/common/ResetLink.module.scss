@@ -1,0 +1,34 @@
+@import 'colors';
+
+.link {
+  margin-left: 20px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 13px;
+
+  span {
+    display: inline-block;
+
+    &.label {
+      margin-right: 10px;
+      background: $thimble-gray;
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 3px;
+      transition: background 200ms linear;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($thimble-gray, 5%);
+      }
+    }
+
+    &.success {
+      color: $thimble-green;
+    }
+
+    &.error {
+      color: $danger;
+    }
+  }
+}

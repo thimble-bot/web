@@ -1,6 +1,8 @@
-import Button from '@/components/button/Button';
-import { GuildConfig } from '@/models/GuildData';
 import { FormEvent, useState } from 'react';
+import { GuildConfig } from '@/models/GuildData';
+
+import Button from '@/components/button/Button';
+import ResetLink from '@/components/dashboard/server-settings/common/ResetLink';
 
 export interface GeneralServerSettingsFormProps {
   id: string;
@@ -60,28 +62,53 @@ const GeneralServerSettingsForm = ({ id, config }: GeneralServerSettingsFormProp
       });
   };
 
+  const updateConfig = (config: GuildConfig) => {
+    setPrefix(config.prefix || '.');
+    setDjRole(config.djRole || '');
+  };
+
   return (
     <form onSubmit={send}>
       <div className="input-group">
-        <label htmlFor="prefix">Prefix:</label>
+        <label htmlFor="prefix">
+          Prefix:
+
+          <ResetLink
+            id={id}
+            configKey="prefix"
+            saving={saving}
+            setSaving={setSaving}
+            updateConfig={updateConfig}
+          />
+        </label>
         <input
           name="prefix"
           id="prefix"
           placeholder="(default: .)"
           disabled={saving}
           onChange={e => setPrefix(e.currentTarget.value)}
-          defaultValue={prefix}
+          value={prefix}
         />
       </div>
 
       <div className="input-group">
-        <label htmlFor="djRole">DJ role (name):</label>
+        <label htmlFor="djRole">
+          Name of the DJ role:
+
+          <ResetLink
+            id={id}
+            configKey="djRole"
+            saving={saving}
+            setSaving={setSaving}
+            updateConfig={updateConfig}
+          />
+        </label>
         <input
           name="djRole"
           id="djRole"
           disabled={saving}
           onChange={e => setDjRole(e.currentTarget.value)}
-          defaultValue={djRole}
+          value={djRole}
         />
       </div>
 
