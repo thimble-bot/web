@@ -7,18 +7,22 @@ import css from './Button.module.scss';
 export interface ButtonOpts {
   primary?: boolean;
   blurple?: boolean;
+  danger?: boolean;
+  small?: boolean;
   href?: string;
   newTab?: boolean;
   nofollow?: boolean;
   icon?: IconProp;
   disabled?: boolean;
   children: ReactNode;
-  onClick?(): void;
+  onClick?(e?: any): void;
 };
 
 const Button = ({
   primary,
   blurple,
+  danger,
+  small,
   href,
   newTab,
   nofollow,
@@ -30,7 +34,9 @@ const Button = ({
     css.button,
     {
       [css.primary]: primary,
-      [css.blurple]: blurple
+      [css.blurple]: blurple,
+      [css.danger]: danger,
+      [css.small]: small
     }
   );
 

@@ -41,6 +41,20 @@
     }
   }
 
+  &.danger {
+    background: $danger;
+    color: #fff;
+
+    &:hover {
+      background: lighten($danger, 5%);
+    }
+  }
+
+  &.small {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
   svg {
     margin-right: 5px;
   }

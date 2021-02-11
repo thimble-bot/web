@@ -4,6 +4,11 @@ import buildUrl from './buildUrl';
 const GUILDS_URL = '/api/discord/guilds';
 const USER_URL = '/api/discord/user';
 
+export interface GenericResponse {
+  ok: boolean;
+  error?: string;
+};
+
 export interface Guild {
   id: string;
   name: string;
@@ -13,10 +18,8 @@ export interface Guild {
   features: string[];
 };
 
-export interface FetchGuildsResponse {
-  ok: boolean;
+export interface FetchGuildsResponse extends GenericResponse {
   servers?: Guild[];
-  error?: string;
 };
 
 export interface PartialGuildConfigResponse {
@@ -24,10 +27,7 @@ export interface PartialGuildConfigResponse {
   config?: GuildConfig;
 };
 
-export interface FetchGuildConfigResponse extends PartialGuildConfigResponse {
-  ok: boolean;
-  error?: string;
-};
+export type FetchGuildConfigResponse = GenericResponse & PartialGuildConfigResponse;
 
 export interface PrivilegedUserData {
   id: string;
@@ -36,10 +36,8 @@ export interface PrivilegedUserData {
   discriminator?: string;
 };
 
-export interface PrivilegedUserDataResponse {
-  ok: boolean;
+export interface PrivilegedUserDataResponse extends GenericResponse {
   user?: PrivilegedUserData;
-  error?: string;
 };
 
 export const fetchGuilds = (): Promise<Guild[]> => new Promise((resolve, reject) => {
@@ -97,3 +95,28 @@ export const fetchDiscordUser = (kind: 'owner' | 'bot'): Promise<PrivilegedUserD
       })
       .catch(reject);
   });
+
+export const deleteConfigProperty = (id: string, configKey: 'prefix' | 'djRole' | 'exp'): Promise<GuildConfig> => {
+  return new Promise((resolve, reject) => {
+    return fetch(`${GUILDS_URL}/${id}?key=${configKey}`, {
+      method: 'DELETE',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      credentials: 'same-origin'
+    })
+      .then(res => res.json())
+      .then((json: FetchGuildConfigResponse) => {
+        if (!json.ok) {
+          if (json.error?.length) {
+            return reject(json.error);
+          }
+
+          return reject('Internal Server Error');
+        }
+
+        return resolve(json.config);
+      });
+  });
+};

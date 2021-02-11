@@ -40,6 +40,22 @@ label {
 
 .input-group {
   margin-bottom: 25px;
+
+  &.range {
+    input, label {
+      display: inline-block;
+      width: auto;
+      margin-right: 15px;
+    }
+
+    input {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .wrapper {

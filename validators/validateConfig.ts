@@ -50,16 +50,9 @@ const validateConfig = (config: GuildConfig) => {
     throw new ValidationError('Invalid experience RNG range values. Make sure both values are larger than 0 and the first value is smaller than or equal to the second value.');
   }
 
-  if (!config.exp.levels || Object.values(config.exp.levels).length === 0) {
+  if (!config.exp.levels || config.exp.levels.length === 0) {
     throw new ValidationError('The EXP feature can only be enabled if you provide levels.');
   }
-
-  Object.keys(config.exp.levels).forEach(level => {
-    const parsedLevel = parseInt(level);
-    if (isNaN(parsedLevel)) {
-      throw new ValidationError(`"${level}" (for role "${config.exp.levels[level]}") is not a valid number, therefore it cannot be used as experience count.`);
-    }
-  });
 };
 
 export default validateConfig;

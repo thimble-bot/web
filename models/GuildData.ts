@@ -1,13 +1,14 @@
 import firebase from '@/lib/firebase';
 import { DocumentSnapshot, DocumentReference } from '@google-cloud/firestore';
 
+export interface EXPLevel {
+  amount: number;
+  roleId: string;
+};
+
 export interface EXPConfig {
   range: [ from: number, to: number ];
-
-  levels: {
-    [exp: string]: string;
-  };
-
+  levels: EXPLevel[];
   ignoreChannels?: string[];
 };
 
