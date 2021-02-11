@@ -1,6 +1,7 @@
 <img src=".github/assets/avatar.png" align="right" width="180px"> <h1>Thimble Bot Website</h1>
 
 This is the source code of Thimble Bot's website. It is a Next.js application.
+**See it live: https://thimblebot.xyz**
 
 ## Getting Started
 
