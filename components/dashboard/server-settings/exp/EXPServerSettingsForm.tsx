@@ -145,7 +145,12 @@ const EXPServerSettingsForm = ({ id, config, setDisplayEditor }: EXPServerSettin
       />
 
       {saving && <div className="info-message">Saving settings...</div>}
-      {success && <div className="success-message">Settings saved successfully!</div>}
+      {success && (
+        <div className="success-message">
+          Your changes have been saved successfully. It may take a few minutes
+          for them to reflect on the bot.
+        </div>
+      )}
       {error && <div className="error-message">{error}</div>}
 
       <div className="input-group buttons">
