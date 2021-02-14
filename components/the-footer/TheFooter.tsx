@@ -5,6 +5,7 @@ import clsx from 'clsx';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import ThemeSwitcher from '../theme-switcher/ThemeSwitcher';
 
 const TheFooter = () => (
   <footer className={clsx('wrapper', css.footer)}>
@@ -22,6 +23,8 @@ const TheFooter = () => (
         <FontAwesomeIcon icon={faGithub} /> GitHub
       </a>
     </div>
+
+    <ThemeSwitcher />
   </footer>
 );
 

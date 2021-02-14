@@ -15,12 +15,12 @@
   transition: background .1s linear;
   margin-right: 10px;
 
-  background: #e6e6e6;
-  color: #222;
+  background: var(--regular-button-bg);
+  color: var(--foreground-color);
 
   &:hover {
-    background: lighten(#e6e6e6, 5%);
-    color: #222;
+    background: var(--regular-button-hover-bg);
+    color: var(--foreground-color);
   }
 
   &.primary {

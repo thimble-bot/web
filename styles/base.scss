@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font: 16px / 1.6 $font-family;
-  background: $thimble-white;
+  background: var(--background-color);
 }
 
 a {
@@ -25,11 +25,13 @@ input {
   padding: 10px 25px;
   font: 15px $font-family;
   outline: none;
-  border: 1px solid $thimble-dark-blue;
+  border: 1px solid var(--input-field-border);
   margin: 10px 0;
+  color: var(--foreground-color);
+  background: var(--background-secondary-color);
 
   &:focus {
-    background: lighten($thimble-blue, 50%);
+    background: var(--input-field-focus-bg);
   }
 }
 
@@ -183,7 +185,8 @@ header {
 }
 
 .page {
-  background: #fff;
+  color: var(--foreground-color);
+  background: var(--background-secondary-color);
   padding: 20px 35px;
   border-radius: 4px;
   margin: 30px auto;

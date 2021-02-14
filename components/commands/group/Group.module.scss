@@ -1,13 +1,13 @@
 @import 'colors';
 
 .group {
-  border: 1px solid $thimble-dark-blue;
+  border: 1px solid var(--command-list-preferred-blue);
   margin-bottom: 15px;
 
   .meta {
     padding: 15px 25px;
     color: #fff;
-    background: $thimble-dark-blue;
+    background: var(--command-list-preferred-blue);
 
     .name {
       font-size: 20px;

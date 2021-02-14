@@ -11,3 +11,41 @@ $blurple: #7289da;
 $discord-dark: #202225;
 
 $danger: #e53935;
+
+.theme-light {
+  --background-color: #{$thimble-white};
+  --background-secondary-color: #fff;
+  --foreground-color: #000;
+  --secondary-faint: #f2f2f2;
+
+  --input-field-border: #{$thimble-dark-blue};
+  --input-field-focus-bg: #{lighten($thimble-blue, 50%)};
+
+  --regular-button-bg: #e6e6e6;
+  --regular-button-hover-bg: #{lighten(#e6e6e6, 5%)};
+
+  --command-list-preferred-blue: #{$thimble-dark-blue};
+
+  --exp-container-background: #f4f4f4;
+
+  --guild-hover-bg: #e8e8e8;
+}
+
+.theme-dark {
+  --background-color: #121212;
+  --background-secondary-color: #232323;
+  --foreground-color: #fff;
+  --secondary-faint: #343434;
+
+  --input-field-border: #{$thimble-blue};
+  --input-field-focus-bg: #181818;
+
+  --regular-button-bg: #444;
+  --regular-button-hover-bg: #{lighten(#444, 5%)};
+
+  --command-list-preferred-blue: #{$thimble-blue};
+
+  --exp-container-background: #343434;
+
+  --guild-hover-bg: #333;
+}

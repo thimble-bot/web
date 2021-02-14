@@ -3,7 +3,7 @@
 .command {
   padding-bottom: 15px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid var(--secondary-faint);
 
   .name {
     font-weight: 700;
@@ -14,7 +14,7 @@
     span {
       display: inline-block;
       padding: 5px 10px;
-      background: #f2f2f2;
+      background: var(--secondary-faint);
       border-radius: 3px;
     }
 
@@ -41,7 +41,7 @@
       display: inline-block;
       font-family: 'Courier New', Courier, monospace;
       padding: 2px 4px;
-      background: #f2f2f2;
+      background: var(--secondary-faint);
       border-radius: 3px;
       margin-right: 5px;
     }
@@ -52,7 +52,7 @@
 
     strong {
       font-size: 18px;
-      color: $thimble-dark-blue;
+      color: var(--command-list-preferred-blue);
       margin-bottom: 5px;
       display: inline-block;
     }
@@ -72,7 +72,7 @@
         code {
           padding: 2px 8px;
           display: inline-block;
-          background: $thimble-dark-blue;
+          background: var(--command-list-preferred-blue);
           border-radius: 3px;
           color: #fff;
           font-size: 0.9rem;

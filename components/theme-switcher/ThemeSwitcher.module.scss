@@ -1,0 +1,29 @@
+@import './colors';
+
+.themeSwitcher {
+  border: 1px solid #656565;
+  color: #656565;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: border-color 150ms linear,
+              color 150ms linear;
+
+  svg, span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  svg {
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    border-color: darken(#656565, 15%);
+    color: darken(#656565, 15%);
+  }
+}
