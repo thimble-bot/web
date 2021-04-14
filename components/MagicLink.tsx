@@ -37,7 +37,9 @@ const MagicLink = ({ children }: { children: ReactNode }) => {
     'https://www.youtube.com/watch?v=5TTRWWXGJhE', // Solarbear - The Padstow Missile Crisis
     'https://www.youtube.com/watch?v=NYAqmBUQhcI', // t+pazolite - Our Wrenally
     'https://www.youtube.com/watch?v=K_yBUfMGvzc', // Deorro - Five Hours
-    'https://www.youtube.com/watch?v=35Muz95Z5zE'  // All Levels at Once - Lift Off
+    'https://www.youtube.com/watch?v=35Muz95Z5zE', // All Levels at Once - Lift Off
+    'https://www.youtube.com/watch?v=2ys9IS5r9yA', // Natsuiro Matsuri & Gawr Gura - Sorairo Days
+    'https://www.youtube.com/watch?v=86_kvUqhY-A'  // Kagamine Rin - Melancholic
   ]);
 
   const randomize = () => {
