@@ -11,14 +11,4 @@ module.exports = mdx({
       path.join(__dirname, 'styles')
     ]
   },
-
-  async redirects() {
-    return [
-      {
-        source: '/invite',
-        destination: process.env.INVITE_URL,
-        permanent: true
-      }
-    ];
-  }
 });

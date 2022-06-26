@@ -47,8 +47,6 @@ const TheHeader = () => {
               <a className={clsx({ active: isActive(route.href) })}>{route.label}</a>
             </Link>
           ))}
-
-          <a href="/invite" className="invite-button">Invite</a>
         </nav>
 
         <button onClick={toggleHamburger} className="hamburger-icon">
