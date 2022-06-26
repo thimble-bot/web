@@ -23,9 +23,7 @@ const HomeContainer = () => (
     </div>
 
     <div className={css.inviteContainer}>
-      <Button href="/invite" primary icon={faArrowRight}>
-        Invite to Your Server
-      </Button>
+      <h1>The Thimble Bot project has been discontinued.</h1>
     </div>
   </div>
 );
